@@ -1,0 +1,49 @@
+<div class="container">
+	<section class="about">
+		<div class="transparent">
+			<h2>About this site...</h2>
+			<p>Mini-Trello is a reproduction of <a href="https://trello.com/" target="_blank">Trello</a> that I built for practice. This is a single-page application built in the MEAN stack with socket.io included for certain features, and a responsive web design of my own creation.</p>
+			<a class="btn" href="mailto:ruhter.philip@gmail.com?Subject=Hello" target="_top">Contact Me</a>
+		</div>
+	</section>
+	<section class="login">
+		<h2>Login</h2>
+		<form name="loginForm" ng-submit="uC.login()">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="username" ng-model="uC.User.uName" required />
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" placeholder="password" ng-model="uC.User.password" required />
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-submit" ng-disabled="loginForm.$invalid">Login</button>
+			</div>
+		</form>
+	</section>
+	<section class="register">
+		<h2>Register</h2>
+		<form name="regForm" ng-submit="uC.register()">
+			<div class="form-group">
+				<input type="text" name="fName" class="form-control" placeholder="first name" ng-model="uC.newUser.fName" ng-pattern="/^[a-zA-Z\s]*$/" required />
+				<span class="error" ng-show="regForm.fName.$error.pattern">*must not contain numbers or special characters</span>
+			</div>
+			<div class="form-group">
+				<input type="text" name="lName" class="form-control" placeholder="last name" ng-model="uC.newUser.lName" ng-pattern="/^[a-zA-Z\s]*$/" required />
+				<span class="error" ng-show="regForm.lName.$error.pattern">*must not contain numbers or special characters</span>
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="username" ng-model="uC.newUser.uName" required />
+			</div>
+			<div class="form-group">
+				<input type="password" name="password" class="form-control" placeholder="password" ng-model="uC.newUser.password" required />
+			</div>
+			<div class="form-group">
+				<input type="password" name="confirm" class="form-control" placeholder="password confirm" ng-model="uC.newUser.confirm" required pw-match="uC.newUser.password" />
+				<span class="error" ng-show="regForm.confirm.$error.match && uC.newUser.confirm.length">*passwords must match</span>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-submit" ng-disabled="regForm.$invalid">Register</button>
+			</div>
+		</form>
+	</section>
+</div>

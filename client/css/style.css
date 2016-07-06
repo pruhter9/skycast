@@ -1,0 +1,84 @@
+/* Normalization */
+html * {
+	margin: 0;
+	padding: 0;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+	letter-spacing: -1px;
+	line-height: 150%;
+	font-size: 15px;
+}
+
+/* Base definitions of HTML elements for the app */
+
+nav {
+	background: #B37BA4;
+	padding: 15px;
+}
+
+.logo p {
+	color: #FFFFFF;
+	font-size: 1.3em;
+}
+
+.logo p span {
+	color: #14BDEB;
+	font-size: 1.3em;
+}
+
+svg g rect {
+	fill: #FF0000;
+}
+
+svg g rect.lowTemp {
+	fill: #0000FF;
+}
+
+svg g text {
+	fill: #FFFFFF;
+}
+
+
+.bar {
+  fill: steelblue;
+}
+
+.axis text {
+  font: 10px sans-serif;
+  fill: #000000;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+
+}
+
+
+#map {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+#map div.gm-style {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.line {
+	stroke: gold;
+	stroke-width: .2em;
+	fill: none;
+}
+
+circle {
+	fill: burlywood;
+}

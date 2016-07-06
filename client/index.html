@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="trello-app">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <!-- Styling -->
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <!-- Meta definitions and responsive design initializations -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+  <!-- Javascript resources -->
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="./javascripts/histograph.js"></script>
+
+  <!-- require angular -->
+  <script type="text/javascript" src="./javascripts/angular/angular.min.js"></script>
+  <script type="text/javascript" src="./javascripts/angular/angular-route.min.js"></script>
+  <script type="text/javascript" src="./javascripts/angular/angular-cookies.min.js"></script>
+  <script type="text/javascript" src="./javascripts/initialize.js"></script>
+  <!-- Friends controller and factory -->
+  <script type="text/javascript" src="./javascripts/controllers/users.js"></script>
+  <script type="text/javascript" src="./javascripts/factories/user.js"></script>
+  <!-- Angular Routes -->
+  <script type="text/javascript" src="./javascripts/routes.js"></script>
+  <!--   <link rel="stylesheet" type="text/css" href="./bootstrap.min.css"> -->
+</head>
+<body ng-controller="WeatherController as wC">
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <p>Sky<span>Cast</span></p>
+      </div>
+      <div class="current">
+      </div>
+    </div>
+  </nav>
+
+	<div class="container">
+    <div ng-view=''></div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12" id="daily-chart-container">
+        <h2>Daily Temperature (F)</h2>
+        <svg id="daily"></svg>
+      </div>
+      <div class="col-md-6 col-sm-12" id="hourly-chart-container">
+        <h2>Hourly Temperature (F)</h2>
+        <svg id="hourly"></svg>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./javascripts/map.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgZdG_SRMvTTsgVmX-5XPV8h_NcObxVYY&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>
